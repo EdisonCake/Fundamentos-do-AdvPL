@@ -57,7 +57,22 @@
 		},
 		{
 			"label": "u_Nota01"
+		},
+		{
+			"label": "u_Crescente"
+		},
+		{
+			"label": "u_Decrescente"
+		},
+		{
+			"label": "u_Crescente02"
+		},
+		{
+			"label": "u_Sobe10"
+		},
+		{
+			"label": "u_SobeN"
 		}
 	],
-	"lastProgramExecuted": "u_Nota01"
+	"lastProgramExecuted": "u_SobeN"
 }
