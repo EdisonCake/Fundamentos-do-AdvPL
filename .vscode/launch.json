@@ -27,7 +27,37 @@
 		},
 		{
 			"label": "u_CarroNovo"
+		},
+		{
+			"label": "u_Temperature"
+		},
+		{
+			"label": "u_Maca"
+		},
+		{
+			"label": "u_HoraExtra"
+		},
+		{
+			"label": "u_TipoNumero"
+		},
+		{
+			"label": "u_OrdenaValor"
+		},
+		{
+			"label": "u_Triangulo01"
+		},
+		{
+			"label": "u_Partida"
+		},
+		{
+			"label": "u_Valor02"
+		},
+		{
+			"label": "u_Zero"
+		},
+		{
+			"label": "u_Nota01"
 		}
 	],
-	"lastProgramExecuted": "u_Area"
+	"lastProgramExecuted": "u_Nota01"
 }
