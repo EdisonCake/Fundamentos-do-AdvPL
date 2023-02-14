@@ -105,7 +105,25 @@
 		},
 		{
 			"label": "u_DoisArrays"
+		},
+		{
+			"label": "u_ArrayRepete"
+		},
+		{
+			"label": "u_Pessoas"
+		},
+		{
+			"label": "u_MediaZero"
+		},
+		{
+			"label": "u_Fatorial"
+		},
+		{
+			"label": "u_IdadeDez"
+		},
+		{
+			"label": "u_SorteiaNome"
 		}
 	],
-	"lastProgramExecuted": "u_DoisArrays"
+	"lastProgramExecuted": "u_SorteiaNome"
 }
