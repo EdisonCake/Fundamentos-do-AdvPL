@@ -90,7 +90,22 @@
 		},
 		{
 			"label": "u_Matriz"
+		},
+		{
+			"label": "u_AchaNome"
+		},
+		{
+			"label": "u_MultiArray"
+		},
+		{
+			"label": "u_ArrayReverso"
+		},
+		{
+			"label": "u_ArrayOrdenado"
+		},
+		{
+			"label": "u_DoisArrays"
 		}
 	],
-	"lastProgramExecuted": "u_Matriz"
+	"lastProgramExecuted": "u_DoisArrays"
 }

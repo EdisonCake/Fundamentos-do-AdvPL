@@ -1,25 +1,25 @@
 #INCLUDE 'TOTVS.CH'
 
 User Function Negativo()
-// DeclaraÁ„o de vari·veis
+// Declara–∑–≥o de vari–±veis
     local nNum      := 0
     local nCount    := 0
     local nNegat    :=0
 
-    // Aqui È iniciado um laÁo de repetiÁ„o finito
+    // Aqui –π iniciado um la–∑o de repeti–∑–≥o finito
     For nCount := 1 to 10
 
-        //Aqui È solicitado ao usu·rio um n˙mero e È atribuÌdo o valor ‡ vari·vel correspondente.
+        //Aqui –π solicitado ao usu–±rio um n—ämero e –π atribu–Ωdo o valor –∞ vari–±vel correspondente.
         nNum := val(fwinputbox("Digite um valor qualquer " + cvaltochar(nCount) + "/10"))
 
-        // Se o n˙mero digitado for negativo, È acrescido em um a vari·vel de contagem.
+        // Se o n—ämero digitado for negativo, –π acrescido em um a vari–±vel de contagem.
         if nNum < 0
             nNegat++
         endif
 
-    Next nCount // PrÛximo passo do laÁo finito de repetiÁ„o.
+    Next nCount // Pr—Éximo passo do la–∑o finito de repeti–∑–≥o.
 
-    // Por fim, È exibido ao usu·rio quantos n˙meros negativos foram digitados.
-    MSGINFO("Foram digitados " + cvaltochar(nNegat) + " n˙meros negativos.", "Negativos.")
+    // Por fim, –π exibido ao usu–±rio quantos n—ämeros negativos foram digitados.
+    MSGINFO("Foram digitados " + cvaltochar(nNegat) + " n—ämeros negativos.", "Negativos.")
 
 Return 
