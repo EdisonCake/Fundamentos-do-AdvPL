@@ -1,23 +1,23 @@
 #INCLUDE 'TOTVS.CH'
 
-// Aqui j· È definido por padr„o a porcentagem do distribuidor e do imposto.
-#DEFINE nDist 28
-#DEFINE nImp 45
+// Aqui j√° √© definido por padr√£o a porcentagem do distribuidor e do imposto.
+#DEFINE nDist 0.28
+#DEFINE nImp 0.45
 
 User Function CarroNovo()
-    // DeclaraÁ„o de vari·vel.
+    // Declara√ß√£o de vari√°vel.
     local cUser     := ''
     local nCusto    := 0
     local nFinal    := 0
 
-    // Nesse bloco, È solicitado ao usu·rio o valor de custo do veÌculo.
-    cUser   := FwInputBox('Digite o valor de custo do veÌculo:', cUser)
-    nCusto  := val(cUser) // Aqui, È atribuÌdo o valor ‡ vari·vel correspondente.
+    // Nesse bloco, √© solicitado ao usu√°rio o valor de custo do ve√≠culo.
+    cUser   := FwInputBox('Digite o valor de custo do ve√≠culo:', cUser)
+    nCusto  := val(cUser) // Aqui, √© atribu√≠do o valor √† vari√°vel correspondente.
 
-    // Aqui, È feito o c·lculo do valor do veÌculo, incluindo os valores de impostos e taxa do distribuidor.
-    nFinal  := (nCusto + (((nCusto * nDist) / 100) + ((nCusto * nImp) / 100)))
+    // Aqui, √© feito o c√°lculo do valor do ve√≠culo, incluindo os valores de impostos e taxa do distribuidor.
+    nFinal  := (nCusto + ((nCusto * nDist) + (nCusto * nImp)))
 
-    // Por fim, È exibido ao usu·rio o valor final do veÌculo.
-    FwAlertInfo("O valor atual do seu veÌculo È de R$" + cvaltochar(round(nFinal, 2)) + '.', "Novo Valor")
+    // Por fim, √© exibido ao usu√°rio o valor final do ve√≠culo.
+    FwAlertInfo("O valor atual do seu ve√≠culo √© de R$" + cvaltochar(round(nFinal, 2)) + '.', "Novo Valor")
 
 Return 

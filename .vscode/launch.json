@@ -72,7 +72,25 @@
 		},
 		{
 			"label": "u_SobeN"
+		},
+		{
+			"label": "u_Tabuada"
+		},
+		{
+			"label": "u_Negativo"
+		},
+		{
+			"label": "u_Entre"
+		},
+		{
+			"label": "u_Somou"
+		},
+		{
+			"label": "u_Media100"
+		},
+		{
+			"label": "u_Matriz"
 		}
 	],
-	"lastProgramExecuted": "u_SobeN"
+	"lastProgramExecuted": "u_Matriz"
 }

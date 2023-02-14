@@ -1,38 +1,38 @@
 #INCLUDE 'TOTVS.CH'
 
 User Function OrdenaValor()
-    // Declaração de variáveis
+    // DeclaraÃ§Ã£o de variÃ¡veis
     local cUser     := ''
     local cExibe    := ''
     local aOrdem    := {}
     local nVal      := 0
     local nCount    := 0
     
-    // Iniciando um laço finito de repetição
+    // Iniciando um laÃ§o finito de repetiÃ§Ã£o
     for nCount := 1 to 3
         
-        // É solicitado ao usuário um número.
-        cUser   := FwInputBox('Digite o ' + cvaltochar(nCount) + 'º número:', cUser)
-        nVal    := val(cUser)   // Nessa linha é atribuido o valor à variável correspondente.
-        cUser   := ''           // Nessa linha, a variável inicial é redefinida.
+        // Ã‰ solicitado ao usuÃ¡rio um nÃºmero.
+        cUser   := FwInputBox('Digite o ' + cvaltochar(nCount) + 'Âº nÃºmero:', cUser)
+        nVal    := val(cUser)   // Nessa linha Ã© atribuido o valor Ã  variÃ¡vel correspondente.
+        cUser   := ''           // Nessa linha, a variÃ¡vel inicial Ã© redefinida.
 
-        AADD(aOrdem, nVal)      // Aqui é adicionado o valor informado pelo usuário ao array na posição do contador.
-    next nCount                 // Aqui, é dado um passo ao próximo número do contador dentro do laço finito de repetição.
+        AADD(aOrdem, nVal)      // Aqui Ã© adicionado o valor informado pelo usuÃ¡rio ao array na posiÃ§Ã£o do contador.
+    next nCount                 // Aqui, Ã© dado um passo ao prÃ³ximo nÃºmero do contador dentro do laÃ§o finito de repetiÃ§Ã£o.
 
-    ASORT(aOrdem)   // A função aSort() ordena os valores do array de forma crescente.
+    ASORT(aOrdem)               // A funÃ§Ã£o aSort() ordena os valores do array de forma crescente.
 
-    // Aqui é iniciado um laço finito de repetição com base no tamanho do array criado anteriormente.
+    // Aqui Ã© iniciado um laÃ§o finito de repetiÃ§Ã£o com base no tamanho do array criado anteriormente.
     for nCount := 1 to len(aOrdem)
 
-        // Aqui é criado um bloco condicional no qual define se o que será concatenado será uma vírgula ao final, ou um ponto final.
-        if nCount < len(aOrdem)     // Se o contador atual for menor que o valor final, é adicionado uma vírgula na concatenação.
-            cExibe += alltrim(str(aOrdem[nCount])) + ", "   // A função STR() transforma o valor em string/caractere, e a função AllTrim() remove espaços em branco antes e depois da string/caractere,
-        elseif nCount = 3           // Se o contador atual for o valor final, é adicionado um ponto final à concatenação.
+        // Aqui Ã© criado um bloco condicional no qual define se o que serÃ¡ concatenado serÃ¡ uma vÃ­rgula ao final, ou um ponto final.
+        if nCount < len(aOrdem)                              // Se o contador atual for menor que o valor final, Ã© adicionado uma vÃ­rgula na concatenaÃ§Ã£o.
+            cExibe += alltrim(str(aOrdem[nCount])) + ", "    // A funÃ§Ã£o STR() transforma o valor em string/caractere, e a funÃ§Ã£o AllTrim() remove espaÃ§os em branco antes e depois da string/caractere,
+        elseif nCount = 3                                    // Se o contador atual for o valor final, Ã© adicionado um ponto final Ã  concatenaÃ§Ã£o.
             cExibe += alltrim(str(aOrdem[nCount])) + "."
         ENDIF 
-    next nCount     // Aqui, é dado um passo ao próximo número do contador dentro do laço finito de repetição.
+    next nCount     // Aqui, Ã© dado um passo ao prÃ³ximo nÃºmero do contador dentro do laÃ§o finito de repetiÃ§Ã£o.
 
-    // Por fim, é exibida a concatenação ordenada, feita anteriormente pela função aSort().
+    // Por fim, Ã© exibida a concatenaÃ§Ã£o ordenada, feita anteriormente pela funÃ§Ã£o aSort().
     MSGALERT(cExibe, "Resultado" )
 
 Return 

@@ -1,47 +1,47 @@
 #INCLUDE 'TOTVS.CH'
 
 User Function Nota01()
-    // DeclaraÁ„o de vari·veis.
+    // Declara√ß√£o de vari√°veis.
     local cUser     := ''
     local aNotas    := {}
     local nCount    := 0
     local nMedia    := 0
     local lLoop     := .T.
 
-    // Iniciado um laÁo de repetiÁ„o definido pela condiÁ„o de Continuar (S/N).
+    // Iniciado um la√ßo de repeti√ß√£o definido pela condi√ß√£o de Continuar (S/N).
     While lLoop
 
-        // … iniciado um laÁo de repetiÁ„o finito
+        // √â iniciado um la√ßo de repeti√ß√£o finito
         for nCount := 1 to 2
             
-            // Aqui È solicitado ao usu·rio a nota do aluno.
-            cUser := FwInputBox("Digite a " + cvaltochar(ncount) + "™ nota do aluno.", cUser)
+            // Aqui √© solicitado ao usu√°rio a nota do aluno.
+            cUser := FwInputBox("Digite a " + cvaltochar(ncount) + "¬™ nota do aluno.", cUser)
 
-            // Se a nota do aluno for um valor inv·lido, È exibida uma mensagem de erro e o laÁo repete atÈ um valor v·lido ser informado.
+            // Se a nota do aluno for um valor inv√°lido, √© exibida uma mensagem de erro e o la√ßo repete at√© um valor v√°lido ser informado.
             if val(cUser) <= 0 .or. val(cUser) > 10
                 MsgStop("Atencao. Nota invalida!")
-                nCount--        // Se a nota for inv·lida, o contador È redefinido.
-                cUser := ''     // Nessa linha, a vari·vel uxiliar È redefinida.
+                nCount--        // Se a nota for inv√°lida, o contador √© redefinido.
+                cUser := ''     // Nessa linha, a vari√°vel uxiliar √© redefinida.
             else
-                // Se a nota for v·lida, È adicionado a um array na posiÁ„o correspondente do contador.
+                // Se a nota for v√°lida, √© adicionado a um array na posi√ß√£o correspondente do contador.
                 aAdd(aNotas, val(cUser))
-                cUser := ''     // Nessa linha, a vari·vel uxiliar È redefinida.
+                cUser := ''     // Nessa linha, a vari√°vel uxiliar √© redefinida.
             endif
             
-        next nCount // Aqui È dado um passo ao prÛximo n˙mero do laÁo de repetiÁ„o finito.
+        next nCount // Aqui √© dado um passo ao pr√≥ximo n√∫mero do la√ßo de repeti√ß√£o finito.
 
-        // Aqui, È feito o c·lculo da mÈdia com base nas informaÁıes das posiÁıes do array.
+        // Aqui, √© feito o c√°lculo da m√©dia com base nas informa√ß√µes das posi√ß√µes do array.
         nMedia      := (aNotas[1] + aNotas[2] ) / 2     
 
-        // E por fim È exibido ao usu·rio a mÈdia do aluno.
-        FwAlertInfo("A mÈdia do aluno foi de " + cvaltochar(round(nMedia, 1)) + ".")
+        // E por fim √© exibido ao usu√°rio a m√©dia do aluno.
+        FwAlertInfo("A m√©dia do aluno foi de " + cvaltochar(round(nMedia, 1)) + ".")
 
-        // Nessa nova caixa, È perguntado ao usu·rio se deseja o c·lculo de uma nova mÈdia.
-        // A funÁ„o Upper() retorna um caractere mai˙sculo independente do que for digitado pelo usu·rio.
-        cUser := Upper(FwInputBox('Deseja um novo c·lculo de MÈdia? (S/N)'))
+        // Nessa nova caixa, √© perguntado ao usu√°rio se deseja o c√°lculo de uma nova m√©dia.
+        // A fun√ß√£o Upper() retorna um caractere mai√∫sculo independente do que for digitado pelo usu√°rio.
+        cUser := Upper(FwInputBox('Deseja um novo c√°lculo de M√©dia? (S/N)'))
 
-        // Nesse bloco condicional, se o usu·rio desejar uma nova mÈdia, È redefinido o laÁo de repetiÁ„o e o programa roda novamente.
-        // Caso contr·rio, o loop È encerrado e o programa finaliza.
+        // Nesse bloco condicional, se o usu√°rio desejar uma nova m√©dia, √© redefinido o la√ßo de repeti√ß√£o e o programa roda novamente.
+        // Caso contr√°rio, o loop √© encerrado e o programa finaliza.
         if cUser == "N"
             lLoop := .f.
         else
@@ -51,7 +51,7 @@ User Function Nota01()
 
     end while
 
-    // Ao finalizar o programa essa mensagem È exibida (foi graÁa minha mesmo, mas ficou bem legal :D)
-    MsgInfo("Obrigado por ter calculado as mÈdias conosco!")
+    // Ao finalizar o programa essa mensagem √© exibida (foi gra√ßa minha mesmo, mas ficou bem legal :D)
+    MsgInfo("Obrigado por ter calculado as m√©dias conosco!")
 
 Return 
