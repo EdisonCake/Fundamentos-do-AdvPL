@@ -11,7 +11,7 @@ User Function DoisArrays()
 
     // Iniciado um laço de repetição finito para o preenchimento do primeiro array.
     For nCount := 1 to 15
-        nUser := Val(FwInputBox("Digite um número aleatório aí! " + cvaltochar(nCount) + "/10"))
+        nUser := Val(FwInputBox("Digite um número aleatório aí! " + cvaltochar(nCount) + "/15"))
         aAdd(aArray1, nUser)
     next 
 

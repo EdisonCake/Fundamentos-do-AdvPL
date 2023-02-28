@@ -10,7 +10,7 @@ User Function ArrayRepete()
     for nCount := 1 to len(aNumeros)
         for nCount2 := (nCount + 1) to len(aNumeros)
 
-            if aNumeros[nCount] == aNumeros[nCount2]          //* Verifica se tem valores iguais nas variáveis e em quais posições estão
+            if aNumeros[nCount] == aNumeros[nCount2]
                 cRepete += CRLF + 'O número ' + cvaltochar(aNumeros[nCount]) + ' se encontra nas posições ' + ALLTRIM(STR(nCount)) + ' e '+ ALLTRIM(STR(nCount2))
             endif
 

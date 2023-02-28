@@ -30,7 +30,7 @@ User Function ArrayReverso()
     // Criado um novo laço finito para concatenação invertida, seguindo com o contador de trás pra frente.
     For nCount := len(aArray) to 1 step -1
         if nCount > 1
-            cConcat2 += "{" + cvaltochar(aArray[nCount]) + "} ,"
+            cConcat2 += "{" + cvaltochar(aArray[nCount]) + "}, "
         else
             cConcat2 += "{" + cvaltochar(aArray[nCount]) + "}."
         Endif 
